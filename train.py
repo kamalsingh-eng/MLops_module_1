@@ -10,7 +10,7 @@ data = pd.read_csv('fetal_health.csv')
 X = data.iloc[:, :-1]
 y = data.iloc[:, -1]
 # Split data into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 # Train model
 model = RandomForestClassifier(n_estimators=120, max_depth=20, random_state=42)
 model.fit(X_train, y_train)
