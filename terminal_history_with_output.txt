@@ -1,0 +1,139 @@
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git init                                                      
+Initialized empty Git repository in C:/Users/u18m90/Music/mlops_assignment/Mlops_module_1/.git/
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git add . 
+warning: LF will be replaced by CRLF in fetal_health.csv.
+The file will have its original line endings in your working directory
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git commit -m "initial commit"
+[master (root-commit) 84d0a58] initial commit  
+ 6 files changed, 2481 insertions(+)
+ create mode 100644 .github/workflows/main2.yml
+ create mode 100644 command run.txt
+ create mode 100644 requirements.txt
+ create mode 100644 train.py
+usage: git remote add [<options>] <name> <url>
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push -u origin main 
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/kamalsingh-eng/MLops_module_1.git'
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git branch
+* master
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git branch -m master main 
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push -u origin main   
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/kamalsingh-eng/MLops_module_1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git pull
+remote: Enumerating objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 5.08 KiB | 400.00 KiB/s, done.
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git pull origin main 
+From https://github.com/kamalsingh-eng/MLops_module_1
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git fetch origin 
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git merge origin/main --allow-unrelated-histories
+Merge made by the 'ort' strategy.
+ .gitignore |  18 ++++++
+ README.md  |   2 +
+ 3 files changed, 221 insertions(+)
+ create mode 100644 LICENSE
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (12/12), 45.21 KiB | 3.23 MiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+   d4fe5d0..1de9f41  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push origin --delete master 
+error: unable to delete 'master': remote ref does not exist
+error: failed to push some refs to 'https://github.com/kamalsingh-eng/MLops_module_1.git'
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git branch
+[main 22833f3] remove blank line from code for build purpose
+ 1 file changed, 11 deletions(-)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 345.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+   1de9f41..22833f3  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git commit -m "remove whiteline from code "
+[main b5dff8e] remove whiteline from code
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push  -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+   22833f3..b5dff8e  main -> main
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git add .
+ 1 file changed, 1 insertion(+)
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push  -u origin main
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+   b5dff8e..e04ba3e  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git add .
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git commit -m "implement the change in the test-size from 0.3 to 0.2 in the new branch feature-branch"
+[feature-branch ec8a90d] implement the change in the test-size from 0.3 to 0.2 in the new branch feature-branch
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push  -u origin feature-branch
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote:      https://github.com/kamalsingh-eng/MLops_module_1/pull/new/feature-branch
+remote:
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+ * [new branch]      feature-branch -> feature-branch
+branch 'feature-branch' set up to track 'origin/feature-branch'.
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git branch -d feature-branch
+error: Cannot delete branch 'feature-branch' checked out at 'C:/Users/u18m90/Music/mlops_assignment/Mlops_module_1'
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git branch -d feature-branch
+warning: deleting branch 'feature-branch' that has been merged to
+         'refs/remotes/origin/feature-branch', but not yet merged to HEAD.
+Deleted branch feature-branch (was ec8a90d).
+PS C:\Users\u18m90\Music\mlops_assignment\Mlops_module_1> git push origin --delete feature-branch
+>>
+To https://github.com/kamalsingh-eng/MLops_module_1.git
+ - [deleted]         feature-branch
